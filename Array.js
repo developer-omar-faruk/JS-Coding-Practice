@@ -18,11 +18,25 @@ console.log(`average = ${arrSum/2}`)
 
 
 // 4. Find the Largest Number
+// soluction 01
 console.log(`lerge num is = ${Math.max(...arr)}`)
+
+// soluction 02
+let maxNum=arr[0];
+for(i=1; i<arr.length; i++){
+    if(arr[i]>maxNum) maxNum=arr[i];
+}
 
 
 // 5. Find the Smallest Number
+// soluction 01
 console.log(`small num is = ${Math.min(...arr)}`)
+
+// soluction 02
+let minNum=arr[0];
+for(i=1; i<arr.length; i++){
+    if(arr[i]<minNum) minNum=arr[i];
+}
 
 
 // 6. Count Even Numbers
@@ -57,7 +71,22 @@ searchEle(arr,10);
 
 
 // 9. Reverse an Array
-console.log(`Reverse arr = ${[...arr].reverse()}`)
+// soluction 01
+console.log(`Reverse arr = ${arr.reverse()}`)
+
+// soluction 02
+let arr2=[];
+for(i=arr.length-1; i>=0; i--){
+    arr2.push(arr[i]);
+}
+
+// soluction 03     /best
+for(let i=0; i<arr.length/2; i++){
+    let temp=arr[i];
+    arr[i]=arr[arr.length-1-i];
+    arr[arr.length-1-i]=temp;
+}
+console.log(arr)
 
 
 // 10. Count Positive, Negative and Zero
@@ -70,7 +99,6 @@ for(i=0; i<arr.length; i++){
     else countZero++;
 }
 console.log(`Positive: ${countPositive}, Nagative: ${countNegative}, Zero: ${countZero}`);
-
 
 }
 

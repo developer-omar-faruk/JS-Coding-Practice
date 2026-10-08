@@ -1,8 +1,46 @@
+// ... array copy be refecance not value
+
+{
+const array=[10,20,30,40,50];
+const array2=array.slice(1,3)   //not change orignal array. skip last i
+const array3=array;
+array3.push(60);    // also change array1 becouse ref
+console.log(array,array2)
+array.splice(1,3)   //change orignal array
+console.log(array);
+
+const ar1=[10,20,30];
+const ar2=["Omar", "Faruk", "Kadir"];
+const ar3=ar1.concat(ar2); //create extra arr .concat(arr1,arr2,..)
+console.log(ar3);
+const ar4=[40,50,60,...ar1,...ar2]; //spread operator
+console.log(ar4);
+
+console.log(ar4.join(" "));  //arr to str. .join("#").join(",")
+console.log(ar4.includes("Omar"))
+
+const a = [50,300,60,20,40,101];
+a.sort((a,b)=> a-b);    //shorting array. arrow function. disending b-a
+console.log(a);
+
+const arr2d=[10,20,30,[40,50],60];
+console.log(arr2d[3][0]);
+console.log(arr2d.flat())   //difine lavel flat(lavel), flat(Infinity). defoult 1
+}
+
+
+// ======Provelems======
 {
 
+const arr=[51,-32,71,23,-10,45];    //Main Array
+
+
 // 1. Print All Elements
-const arr=[51,-32,71,23,-10,45];
+// soluction 01
 for(i=0;i<arr.length; i++) console.log(arr[i]);
+
+// soluction 02
+for(let num of arr) console.log(num);
 
 
 // 2. Find the Sum

@@ -1,3 +1,4 @@
+// ---Number, Math Object, Random---
 {
 // let a="123"
 // let b= Number(a);
@@ -25,4 +26,29 @@ console.log(Math.floor(Math.random()*(9999-1000+1))+1000)
 
 {
 // create own random function
+}
+
+
+
+// ---String---
+{
+const user=" Omar Faruk "
+console.log(user.trim())    //remobe fast and last space
+
+const names= "Omar Faruk,Kadir Hazi,Parul Begom,Sumaiya,Sayma";
+console.log(names.split(","));  //return arr and seperate all names
+}
+
+
+
+// ---Date---
+{
+const now = new Date();
+
+// console.log(now);
+// console.log(now.toString())
+console.log(now.toLocaleString())
+// console.log(now.getMilliseconds())
+console.log(Date.now());    //timeStamp
+// console.log(new Date(1791467110837))
 }

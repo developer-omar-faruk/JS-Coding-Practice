@@ -52,3 +52,11 @@ console.log(now.toLocaleString())
 console.log(Date.now());    //timeStamp
 // console.log(new Date(1791467110837))
 }
+
+{
+console.log(1+"2")
+console.log(true+1)
+console.log(false+1)
+console.log(null+1)
+console.log(undefined+1)
+}

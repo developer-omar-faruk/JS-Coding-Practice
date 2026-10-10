@@ -1,6 +1,7 @@
 {
 const user={
     name: "Omar Faruk",
+    45: "Gamer_45",
     "age": 21,
     email: "omarfaruk1045@gmail.com",
     fun: function(){

@@ -60,3 +60,29 @@ console.log(false+1)
 console.log(null+1)
 console.log(undefined+1)
 }
+
+
+{
+const n1=10;    // can't access fast becouse <uninitilised> (temporal dead zone)
+const n2=20;
+addFun(n1,n2);
+function addFun(a,b){
+    console.log(a+b);
+}
+}
+
+
+{   // Closure
+function counter(){
+    let count=0;    // function remember variable from its outer scope
+    function increse(){
+        count++
+        return count;
+    }
+    return increse;
+}
+const count= counter();
+console.log(count());   // 1
+console.log(count());   // 2
+console.log(count());   // 3
+}

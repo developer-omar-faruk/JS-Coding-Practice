@@ -57,3 +57,12 @@ function hOrder(callbackFun){
     callbackFun();
 }
 hOrder(callback);
+
+//
+function sub(value){
+    return function execute(num){
+        return num*value;
+    }
+}
+const val = sub(20)(5);
+console.log(val);
